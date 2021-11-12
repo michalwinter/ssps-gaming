@@ -865,20 +865,22 @@ body {
   max-width: 1400px;
   box-sizing: border-box;
   padding: 0px 20px;
+}
+#body main.turnaj section.registrace .section {
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-#body main.turnaj section.registrace h1 {
+#body main.turnaj section.registrace .section h1 {
   font-size: 1.5rem;
 }
-#body main.turnaj section.registrace .teams {
-  max-width: 600px;
+#body main.turnaj section.registrace .chose-team .teams {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-#body main.turnaj section.registrace .teams article.team {
+#body main.turnaj section.registrace .chose-team .teams article.team {
   padding: 20px 25px;
   display: flex;
   align-items: center;
@@ -886,17 +888,34 @@ body {
   border-radius: 5px;
   background-color: #282828;
 }
-#body main.turnaj section.registrace .teams article.team .grow {
+#body main.turnaj section.registrace .chose-team .teams article.team .grow {
   flex-grow: 1;
 }
-#body main.turnaj section.registrace .teams article.team .fa-ban {
+#body main.turnaj section.registrace .chose-team .teams article.team .fa-ban {
   color: #DA4167;
 }
-#body main.turnaj section.registrace .teams article.team.no-use {
+#body main.turnaj section.registrace .chose-team .teams article.team.no-use {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   opacity: 0.5;
+}
+#body main.turnaj section.registrace .chose-team .teams article.team.usable {
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+#body main.turnaj section.registrace .chose-team .teams article.team.usable:hover {
+  transition-duration: 200ms;
+  opacity: 0.8;
+}
+#body main.turnaj section.registrace .chose-players select {
+  position: relative;
+  all: unset;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #282828;
 }
 #body main.dashboard {
   display: flex;
@@ -1461,7 +1480,11 @@ body {
 }
 #body main.dashboard .section-team .section .players .player .name {
   display: flex;
+  align-items: center;
   gap: 20px;
+}
+#body main.dashboard .section-team .section .players .player .name span {
+  line-height: 26px;
 }
 #body main.dashboard .section-team .section .players .player .name i {
   width: 20px;
@@ -1616,7 +1639,7 @@ body {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
-  background-color: #DA4167;
+  background-color: #388659;
   color: #FFF;
 }
 #body main.dashboard section.team-invite a.back:hover {
